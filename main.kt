@@ -140,3 +140,67 @@ fun main(){
 
 }
 
+clase 4-6
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+data class Student(
+    val id: Long,
+    val name: String,
+    val email:String,
+    val grade: Int,
+    val isActive: Boolean
+
+)
+
+fun getStudents(): MutableList<Student>{    
+    val sebastian = Student(
+        name = "Sebastian",
+        email = "sebastian@puce.com",
+        grade = 8,
+        id = 1,
+        isActive = true
+    
+    )
+    val david = Student(
+        name = "David",
+        email = "David@puce.com",
+        grade = 8,
+        id = 2,
+        isActive = true
+    
+    )
+        val josue = Student(
+        name = "Josue",
+        email = "Josue@puce.com",
+        grade = 5,
+        id = 3,
+        isActive = true
+    
+    )
+    return mutableListOf(sebastian, david, josue)
+    
+}
+
+fun getResult(grade: Int): String{
+    return if (grade>7) "Aprobado" else "reprobado"
+        
+}
+
+fun main(){
+    val estudiantesEstudiosos: MutableList<Student> = mutableListOf()
+    for (student in getStudents()){
+        if(student.grade>7){
+            estudiantesEstudiosos.add(student)
+        }
+    
+    }
+    print(estudiantesEstudiosos)
+    
+     val estudiantesEstudiosos2: List<Student> = getStudents().filter { loQueSea -> 
+         loQueSea.grade > 7
+         
+     }
+     print(estudiantesEstudiosos2)
+}
