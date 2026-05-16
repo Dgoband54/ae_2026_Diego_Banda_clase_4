@@ -59,3 +59,29 @@ fun main() {
     
 }
 
+clase 4-4
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+data class Student(
+    val id: Long,
+    val name: String,
+    val email:String,
+    val grade: Int,
+    val isActive: Boolean
+
+)
+
+fun main(){
+    val jorge = Student(
+        name = "Jorge",
+        email = "Jorge@puce.com",
+        grade = 8,
+        id = 1,
+        isActive = true
+    
+    )
+    println(jorge)
+}
+
