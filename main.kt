@@ -15,4 +15,22 @@ fun main() {
     
     mensaje = "Hola mundo mutado"
     println(mensaje)
+}   
+
+clase 4-2
+
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    val name: String = "Ana"
+    val email: String = "ana@gmail.com"
+    val number: Int = 67
+    //Ana - ana@gmail.com
+    
+    println(name + " - "+ email) //nunca hacer esto
+    println("$name - $email")//siempre usar string templates en log
+    println("te faltan ${100-number} para llegar al 100")
 }
+
